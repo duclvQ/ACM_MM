@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 src/app/uploads/
 src/app/logs/
+=======
+src/app/upload/**
+>>>>>>> e6a43ac... ignore rag.ipynb
 src/app/conversation.ipynb
 src/app/rag.ipynb
