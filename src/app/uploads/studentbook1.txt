@@ -1,0 +1,8 @@
+0.64--->2.06	SPEAKER_00: Bài 1 Tên tôi là Peter Hội thoại Chào chị Chào anh Xin lỗi Anh tên là gì?
+2.08--->2.681	SPEAKER_01:Tên tôi là Peter Chị tên là gì?
+2.701--->3.441	SPEAKER_01:Tên tôi là Yumi Chị là người nước nào?
+3.461--->4.321	SPEAKER_01:Tôi là người Nhật Bản Anh là người nước nào?
+4.341--->5.081	SPEAKER_01:Tôi là người Anh Rất vui được gặp chị
+30.674--->32.515	SPEAKER_01: Rất vui được gặp anh Từ vựng Chào Xin lỗi Tên Người Nước Nào Là Rất Vui Gặp Rất vui được gặp
+56.51--->58.051	SPEAKER_00: ngữ âm phân biệt b m v ba ma va bô mô vô bo mo vo Nghe và nhắc lại bà và cháu
+86.903--->87.604	SPEAKER_01: Mua bơ và vỡ Biết viết Con bò ăn cỏ
