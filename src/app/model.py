@@ -33,19 +33,19 @@ text_splitter = CharacterTextSplitter(
 @st.cache_resource
 def load_ollama_llamma3():
     llm = ChatOllama(model="llama3", 
-                    temperature=0.1, 
+                    temperature=0, 
                     top_p=1,
                     mirostat = 2,
-                    mirostat_tau =1,
+                    mirostat_tau =0,
                     )
     return llm
 @st.cache_resource
 def load_ollama_llamma3_json():
     llm = ChatOllama(model="llama3", 
-                    temperature=0.1, 
+                    temperature=0.3, 
                     top_p=1,
                     mirostat = 2,
-                    mirostat_tau =1,
+                    mirostat_tau =3,
                     format="json"
                     )
     return llm
@@ -69,14 +69,16 @@ def generate_resvised_meeting_minutes(raw_document, first_meeting_minutes, quest
     prompt_template = """SYSTEM
     Generate a revised meeting minute based on
     the first meeting minute, and the question/answer below. 
-    KEEP the correct informations in the first meeting minute.
     ONLY change if there are any conflicts or errors.
-    You should indicate the changes made in the revised meeting minute if needed.:
+    SHOULD follow the verification question and answer below to verify the information.
+    Keep the revised meeting minute concise. 
+    You MUST indicate the changes made in the revised meeting minute if needed.:
     
-    First meeting minute: {first_meeting_minutes}
+    First meeting minute: {first_meeting_minutes}\n\n
     
-    Verification Question and Answer: {question_and_answer}
+    Verification Question and Answer: {question_and_answer}\n\n
     
+    Here is raw document: {raw_document} \n\n
     Answer:
     
     Changes made in the revised meeting minute:
@@ -90,11 +92,13 @@ def generate_resvised_meeting_minutes(raw_document, first_meeting_minutes, quest
 def answer_question(question, context):
     # Define prompt
     prompt_template = """SYSTEM
-    Answer the following question based on the context below, keep the answer concise, less than 3 sentences.
+    Answer the following question based on the context below, keep the answer concise,
+    less than 3 sentences. Indicate the source of the answer if needed. Explain why you think the answer is correct.
     IF you don't know the answer, just say that you don't know or not mentioned in the context.:
+    Caution: (PERSON) is attending the meeting, [PERSON] is mentioned person.
     Context: {context}
     Question: {question}
-    Answer:"""
+    Explain your answer also. Answer:"""
     prompt = PromptTemplate.from_template(prompt_template)
     # Define LLM chain
     llm_chain = prompt | llm
@@ -106,7 +110,7 @@ def verify_question_generator(input_text):
     # Define prompt
     prompt_template = """Write ONLY questions based on the following text:
     {input_text}
-    Return in json format:
+    Return in json format, carefully check the attendees.:
     """
     prompt = PromptTemplate.from_template(prompt_template)
     # Define LLM chain
@@ -121,6 +125,7 @@ def extract_fact(input_text):
     prompt_template = """SYSTEM
     Extract the mentioned pieces of information that need to 
     be rechecked from the following text:
+    
     {input_text}
     Return in json format:
     """
@@ -143,8 +148,9 @@ def extract_fact(input_text):
 
 def generate_first_meeting_minute(transcripts, format = mm_template):
     prompt_template = """SYSTEM
-    Write a meeting minute follow-up this format : {format}
+    Write a meeting minute ADHERE this format : {format}
     and based on the following conversation:
+    In the transcripts, (_) is attending the meeting, [_] is mentioned person.
     Transcripts:
     {transcripts}
     """
@@ -153,7 +159,7 @@ def generate_first_meeting_minute(transcripts, format = mm_template):
     for chunks in llm_chain.stream({"transcripts": transcripts, "format": format}):
         yield chunks
         
-def compress_transcript(input_text, rate = 0.9):
+def compress_transcript(input_text, rate = 0.8):
     compressed_prompt = llm_lingua.compress_prompt(input_text, instruction="", question="", rate = rate)
     return compressed_prompt['compressed_prompt'], compressed_prompt['rate']
 

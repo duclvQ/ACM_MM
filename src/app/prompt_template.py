@@ -33,7 +33,7 @@ mm_template = """
 **Time:** [Start Time] - [End Time]
 **Location:** [Location]
 **Attendees:**
-- [Person 1]
+- [Person 5]
 - [Person 2]
 - [Person 3]
 
@@ -42,20 +42,18 @@ mm_template = """
 2. [Agenda Item 2]
 3. [Agenda Item 3]
 
-### Discussion Summary
-- **[Agenda Item 1]**: [Discussion Points]
-- **[Agenda Item 2]**: [Discussion Points]
-- **[Agenda Item 3]**: [Discussion Points]
+### Key Points
+- [Key Point 1]
+- [Key Point 2]
 
 ### Action Items
 - [Action Item 1]: [Person Responsible] - [Deadline]
 - [Action Item 2]: [Person Responsible] - [Deadline]
-- [Action Item 3]: [Person Responsible] - [Deadline]
+
 
 ### Decisions Made
 - [Decision 1]
 - [Decision 2]
-- [Decision 3]
 
 **Next Meeting:**
 - **Date:** [Next Meeting Date]

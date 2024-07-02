@@ -60,20 +60,29 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         
+compression_on = st.toggle("Prompt compression", False)   
+
 # generate the first meeting minute
 if st.session_state.first_run:
     st.write("Please upload a transcript or audio file to start.")
     if raw_document:
+        
         st.session_state.first_run = False
-        st.write(':blue[Compress the transcript...]')
+        chat_history.append(f"AI: Start the conversation with the uploaded document.\n")
+        chat_history.append(f"Raw meeting transcripts: {raw_document}\n")
         compressed_transcript, rate = compress_transcript(raw_document)
-        st.write(':blue[Compression rate:]', rate)
-        st.write(':blue[Generate a meeting minute from the compressed transcript...]')
+        if compression_on:
+            st.write(':blue[Compress the transcript...]')
+            st.write(':blue[Compression rate:]', rate)
+            st.write(':blue[Generate a meeting minute from the compressed transcript...]')
+        else:
+            compressed_transcript = raw_document
+            st.write(':blue[Generate a meeting minute from the raw transcript...]')
         st.session_state.messages.append({"role": "user", "content": "write a meeting minutes from the transcript."})
         chat_history.append(f"HUMAN: write a meeting minutes from the transcript.\n")
         first_meeting_minutes = st.write_stream(generate_first_meeting_minute(compressed_transcript))
         
-        st.write(':blue[Here are the information that need to be rechecked.]')
+        st.write(':red[Here are the information that need to be rechecked.]')
         verify_questions = st.write_stream(verify_question_generator(first_meeting_minutes))
         # convert to dict
         verify_questions = convert_str_to_json(verify_questions)
@@ -81,19 +90,19 @@ if st.session_state.first_run:
         for key in list(verify_questions.keys()):
             for question in verify_questions[key]:
                 st.write(f":blue[Question: {question}]")
-                answer = st.write_stream(answer_question(question, context = raw_document))
+                answer = st.write_stream(answer_question(question, context = compressed_transcript))
                 q_and_a = {"question": question, "answer": answer}
                 answers.append(q_and_a)
                 st.session_state.messages.append({"role": "assistant", "content": f"Question: {question}\nAnswer: {answer}"})
         # join the answers
         answers = "\n".join([f"Question: {qa['question']}\nAnswer: {qa['answer']}" for qa in answers])
         st.write(':blue[Now, I will generate the revised meeting minutes based on the answers.]')
-        revised_meeting_minutes = st.write_stream(generate_resvised_meeting_minutes(raw_document,first_meeting_minutes, answers))
-        st.session_state.messages.append({"role": "assistant", "content": revised_meeting_minutes})
         
-                
+        revised_meeting_minutes = st.write_stream(generate_resvised_meeting_minutes(compressed_transcript,first_meeting_minutes, answers))
         st.session_state.messages.append({"role": "assistant", "content": revised_meeting_minutes})
-        chat_history.append(f"AI: {revised_meeting_minutes}\n")
+
+        st.session_state.messages.append({"role": "assistant", "content": revised_meeting_minutes})
+        chat_history.append(f"AI: FIRST version of meeting minutes: {revised_meeting_minutes}\n")
         st.write(':blue[Do you want me to change anything in the meeting minute?\n \
                     Or You can ask me other questions about this meeting minutes.]')
 

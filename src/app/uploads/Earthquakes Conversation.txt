@@ -1,74 +1,77 @@
-3.311--->4.131	SPEAKER_00: Hey, check this out.
-4.512--->6.633	SPEAKER_00:You know what Eric asked me when I got into work this morning?
-6.653--->8.373	SPEAKER_01:I have no idea.
-8.393--->9.294	SPEAKER_01:What did he ask you?
-9.894--->11.975	SPEAKER_00:He asked me if I felt the earthquake last night.
-13.236--->13.996	SPEAKER_01:Earthquake?
-14.416--->15.577	SPEAKER_01:You've got to be kidding.
-15.597--->16.737	SPEAKER_01:I didn't feel an earthquake.
-17.017--->18.038	SPEAKER_00:I know, that's what I said.
-18.578--->20.579	SPEAKER_00:He told me it actually woke him up last night.
-21.596--->27.598	SPEAKER_00: You know, yeah, it was like it went, it happened at like, uh, four 42 in the morning.
-27.758--->38.14	SPEAKER_00:So we must've been sleeping, but I mean, it's possible that, you know, even if we had been awake, we might not have felt it because you know, maybe it, uh, wasn't felt, you know, this far North.
-38.801--->42.262	SPEAKER_00:But, uh, I mean, I thought he was pulling my leg when he first talked about it.
-43.282--->47.343	SPEAKER_01:Well, I guess that's not so farfetched considering we live on a major fault line here.
-48.308--->68.983	SPEAKER_00: Yeah, but actually I think this earthquake was on a different fault line, because Eric lives just south of San Jose, and the earthquake, he said, was due east of San Jose, so he was obviously a lot closer to the epicenter than we were, so I'm not even sure it was felt here.
-69.604--->70.925	SPEAKER_01:Yeah, that makes sense.
-73.052--->79.497	SPEAKER_01: You know, I've experienced quite a few earthquakes in the past several years, but I've been living here now a little over two years.
-79.537--->81.659	SPEAKER_01:I've, I think I've only experienced one here.
-82.339--->83.84	SPEAKER_01:It was really strange too.
-83.901--->98.352	SPEAKER_01:I was, um, each, I should say each earthquake has been a completely different experience, but the one I, the one I felt here, I was standing outside a restaurant talking to AJ and another friend, and all of a sudden it just felt like
-99.793--->100.614	SPEAKER_01: this shift.
-100.654--->110.222	SPEAKER_01:It's really hard to explain, but it made me think of like a cartoon, like how in the cartoon, like buildings might just shift to the right and then shift right back.
-111.323--->112.264	SPEAKER_00:Yeah, without falling.
-112.784--->113.605	SPEAKER_01:Yeah, without falling.
-113.845--->118.149	SPEAKER_01:And I had no idea what was going on for a few minutes afterwards.
-118.189--->120.551	SPEAKER_01:And then I realized, oh, that must have been an earthquake.
-121.332--->121.472	SPEAKER_00:Yeah.
-121.492--->123.013	SPEAKER_00:You know what I usually notice?
-123.354--->124.715	SPEAKER_00:The times that I've been at home,
-125.698--->148.476	SPEAKER_00: here and uh... there's been an earthquake it's almost as if there's this really big train or like a gigantic mac truck going by and uh... suddenly i start to hear the heater shaking and uh... it's like a the noise is like uh... is loud for like a second and it's gone
-149.583--->157.81	SPEAKER_00: It's really weird, you know, it's almost like the first couple of times I felt it, I wasn't even aware it was an earthquake while it was happening.
-158.691--->165.637	SPEAKER_01:Well, that's so funny you say that because one that I experienced in Bangkok, it actually was after the tsunami.
-166.277--->171.081	SPEAKER_01:And so later I found out that it was aftershock from the tsunami.
-171.402--->174.624	SPEAKER_01:But anyway, I was in a building up on the ninth floor.
-175.755--->179.717	SPEAKER_01: And suddenly there was all this rattling.
-180.698--->184.7	SPEAKER_01:And I'm thinking to myself, it's just it was so irrational.
-184.74--->191.244	SPEAKER_01:I'm thinking to myself, God, there's like a train going by and I can't believe that this building is shaking so much from the train.
-194.6--->200.482	SPEAKER_01: Of course, a train wouldn't have made a building, or at least me up on the ninth floor, feel something to that effect.
-201.262--->203.723	SPEAKER_01:I think it happened about two times.
-203.743--->209.585	SPEAKER_01:That one wasn't until several days later when I was talking to people and they were like, oh, did you feel the earthquake?
-209.605--->212.546	SPEAKER_01:Then it dawned on me, oh, that was an earthquake.
-214.046--->214.746	SPEAKER_00:Yeah, I know.
-215.847--->219.328	SPEAKER_00:It's crazy how when you're not used to feeling them, you could think it's something else.
-219.693--->219.973	SPEAKER_01: Yeah.
-220.433--->221.254	SPEAKER_00:I mean, yeah, totally.
-221.574--->225.096	SPEAKER_00:I've been living here for a while now and I've definitely felt my share of earthquakes.
-225.156--->228.517	SPEAKER_00:I mean, you know, when you live here, it's a given that you're going to experience earthquakes.
-228.798--->231.099	SPEAKER_00:You just hope that you're not going to be here for the big one.
-231.119--->232.459	SPEAKER_00:Right.
-233.76--->241.384	SPEAKER_00:When I first moved here, it was, uh, about five years after the Loma Prieta earthquake, which was a very big earthquake here.
-242.184--->249.388	SPEAKER_00:And, um, there are a lot of people who lived here who I met who had actually been living in the area when the earthquake hit.
-249.864--->251.665	SPEAKER_00: So it was interesting to get their perspective.
-252.486--->258.429	SPEAKER_00:And it also made me remember where I was when I heard about the Loma Prieta earthquake.
-258.85--->265.794	SPEAKER_00:I was watching the World Series on TV, and it was taking place in San Francisco.
-266.574--->275.38	SPEAKER_00:So as I'm watching it, suddenly the announcer starts saying, wow, I think we're feeling an earthquake here.
-275.8--->277.301	SPEAKER_00:And the cameras started shaking.
-278.597--->280.618	SPEAKER_00: All of a sudden, the TV coverage cut out.
-282.78--->285.602	SPEAKER_00:I wanted to get a rundown of what happened, so I turned to the news station.
-287.543--->293.748	SPEAKER_00:Within a few minutes, they were discussing this gigantic earthquake that had hit San Francisco.
-294.188--->301.854	SPEAKER_00:They started showing pictures, maybe 30 minutes later, of these people who were trying to weed through the rubble.
-302.267--->304.868	SPEAKER_00: of these buildings that had been like coming down.
-305.348--->307.61	SPEAKER_00:So, I mean, it was pretty scary.
-307.65--->309.19	SPEAKER_00:I'll tell you why.
-309.27--->309.45	SPEAKER_00:Yeah.
-309.891--->315.313	SPEAKER_01:Yeah, well, you know, the three months I was living in Japan, I experienced two.
-316.494--->323.017	SPEAKER_01:Both of those were very different, very different from the one I'd experienced here and also very different from the one in Bangkok.
-323.097--->331.081	SPEAKER_01:But one of them, I was actually up in my apartment which was on the fifth floor of a building and I was woken up at about 5 o'clock in the morning to the building swaying.
-331.809--->340.776	SPEAKER_01: And because earthquakes are like a dime a dozen in Japan, they've built a lot of their buildings to absorb the shock.
-341.657--->342.838	SPEAKER_01:So that's why it was swaying.
-342.858--->344.899	SPEAKER_01:It was really, it was a very surreal feel.
-347.681--->349.163	SPEAKER_01:Hi, this is Kristen Dodds.
-349.603--->350.684	SPEAKER_00:And this is Joe Weiss.
-351.424--->358.71	SPEAKER_00:And we just wanted to let you know that this material is copyrighted in the year 2008 by Learn Real English LLC.
-362.178--->364.973	SPEAKER_00: www.learnrealenglish.com
+from 3.294 to 4.095	SPEAKER_00: Hey, check this out.
+from 4.475 to 6.597	SPEAKER_00:You know what Eric asked me when I got into work this morning?
+from 6.617 to 8.339	SPEAKER_01:I have no idea.
+from 8.359 to 9.28	SPEAKER_01:What did he ask you?
+from 9.88 to 11.942	SPEAKER_00:He asked me if I felt the earthquake last night.
+from 13.224 to 13.984	SPEAKER_01:Earthquake?
+from 14.405 to 15.526	SPEAKER_01:You've got to be kidding.
+from 15.566 to 16.727	SPEAKER_01:I didn't feel an earthquake.
+from 16.987 to 18.008	SPEAKER_00:I know, that's what I said.
+from 18.028 to 20.571	SPEAKER_00:He told me it actually woke him up last night.
+from 21.581 to 27.562	SPEAKER_00: You know, yeah, it was like it went, it happened at like, uh, four 42 in the morning.
+from 27.742 to 38.124	SPEAKER_00:So we must've been sleeping, but I mean, it's possible that, you know, even if we had been awake, we might not have felt it because you know, maybe it, uh, wasn't felt, you know, this far North.
+from 38.764 to 42.225	SPEAKER_00:But, uh, I mean, I thought he was pulling my leg when he first talked about it.
+from 43.265 to 47.306	SPEAKER_01:Well, I guess that's not so farfetched considering we live on a major fault line here.
+from 48.271 to 52.212	SPEAKER_00: Yeah, but actually, I think this earthquake was on a different fault line.
+from 53.553 to 58.455	SPEAKER_00:Because, you know, Eric lives just south of San Jose.
+from 58.895 to 59.135	SPEAKER_01:Yeah.
+from 59.595 to 63.917	SPEAKER_00:And the earthquake, he said, was due east of San Jose.
+from 64.137 to 66.978	SPEAKER_00:So he was obviously a lot closer to the epicenter than we were.
+from 67.058 to 68.959	SPEAKER_00:So I'm not even sure it was felt here.
+from 69.559 to 70.919	SPEAKER_01:Yeah, that makes sense.
+from 71.98 to 75.161	SPEAKER_01:Well, you know, I've experienced quite a few earthquakes
+from 75.97 to 79.472	SPEAKER_01: in the past several years, but I've been living here now a little over two years.
+from 79.512 to 81.634	SPEAKER_01:I've, I think I've only experienced one here.
+from 82.314 to 83.815	SPEAKER_01:It was really strange too.
+from 83.875 to 100.606	SPEAKER_01:I was, um, each, I should say each earthquake has been a completely different experience, but the one I, the one I felt here, I was standing outside a restaurant talking to AJ and another friend and all of a sudden it just felt like this shift.
+from 100.646 to 104.388	SPEAKER_01:It's really hard to explain, but it made me think of like a cartoon, like how
+from 106.363 to 110.186	SPEAKER_01: in the cartoon, like buildings might just shift to the right and then shift right back.
+from 111.287 to 112.227	SPEAKER_00:Yeah, without falling.
+from 112.748 to 113.568	SPEAKER_01:Yeah, without falling.
+from 113.828 to 118.131	SPEAKER_01:And I had no idea what was going on for a few minutes afterwards.
+from 118.151 to 120.513	SPEAKER_01:And then I realized, oh, that must have been an earthquake.
+from 121.294 to 121.434	SPEAKER_00:Yeah.
+from 121.454 to 122.975	SPEAKER_00:You know what I usually notice?
+from 123.315 to 135.944	SPEAKER_00:The times that I've been at home here and there's been an earthquake, it's almost as if there's this really big train or like a gigantic Mack truck going by.
+from 136.713 to 148.477	SPEAKER_00: And suddenly, I start to hear the heater shaking, and it's like the noise is loud for like a second, and then it's gone.
+from 149.397 to 151.518	SPEAKER_00:So it's really weird.
+from 151.578 to 157.78	SPEAKER_00:It's almost like the first couple of times I felt it, I wasn't even aware it was an earthquake while it was happening.
+from 158.66 to 165.542	SPEAKER_01:Well, that's so funny you say that, because one that I experienced in Bangkok, it actually was after the tsunami.
+from 166.226 to 171.05	SPEAKER_01: And so later I found out that it was aftershock from the tsunami.
+from 171.37 to 179.697	SPEAKER_01:But anyway, I was in a building up on the ninth floor and suddenly there was all this rattling.
+from 180.698 to 184.701	SPEAKER_01:And I'm thinking to myself, it was so irrational.
+from 184.741 to 191.227	SPEAKER_01:I'm thinking to myself, God, there's like a train going by and I can't believe that this building is shaking so much from the train.
+from 194.586 to 201.229	SPEAKER_01: Of course, a train wouldn't have made a building, or at least me up on the ninth floor, feel something to that effect.
+from 201.249 to 203.71	SPEAKER_01:I think it happened about two times.
+from 203.73 to 209.552	SPEAKER_01:That one wasn't until several days later when I was talking to people and they were like, oh, did you feel the earthquake?
+from 209.572 to 212.513	SPEAKER_01:Then it dawned on me, oh, that was an earthquake.
+from 214.034 to 214.714	SPEAKER_00:Yeah, I know.
+from 214.914 to 219.296	SPEAKER_00:It's crazy how when you're not used to feeling them, you could think it's something else.
+from 220.41 to 225.054	SPEAKER_00: I mean, I've been living here for a while now and I've definitely felt my share of earthquakes.
+from 225.134 to 228.497	SPEAKER_00:I mean, you know, when you live here, it's a given that you're going to experience earthquakes.
+from 228.777 to 231.099	SPEAKER_00:You just hope that you're not going to be here for the big one.
+from 233.741 to 241.367	SPEAKER_00:When I first moved here, it was about five years after the Loma Prieta earthquake, which was a very big earthquake here.
+from 242.168 to 249.374	SPEAKER_00:And, um, there are a lot of people who lived here who I met who had actually been living in the area when the earthquake hit.
+from 249.83 to 251.631	SPEAKER_00: So it was interesting to get their perspective.
+from 252.451 to 258.414	SPEAKER_00:And it also made me remember where I was when I heard about the Loma Prieta earthquake.
+from 258.834 to 265.778	SPEAKER_00:I was watching the World Series on TV, and it was taking place in San Francisco.
+from 266.538 to 275.362	SPEAKER_00:So as I'm watching it, suddenly the announcer starts saying, wow, I think we're feeling an earthquake here.
+from 275.782 to 277.263	SPEAKER_00:And the cameras started shaking.
+from 277.902 to 280.584	SPEAKER_00: And all of a sudden, the TV coverage cut out.
+from 281.384 to 284.066	SPEAKER_00:So I wanted to get a rundown of what happened.
+from 284.086 to 293.732	SPEAKER_00:So I turned to the news station, and within a few minutes, they were discussing this gigantic earthquake that had hit San Francisco.
+from 294.032 to 301.837	SPEAKER_00:And they started showing pictures, maybe 30 minutes later, of these people who were trying to weed through the rubble
+from 302.253 to 304.853	SPEAKER_00: of these buildings that had been like coming down.
+from 305.314 to 307.594	SPEAKER_00:So, I mean, it was pretty scary.
+from 307.614 to 308.534	SPEAKER_00:I'll tell you why.
+from 309.054 to 309.414	SPEAKER_00:Yeah.
+from 309.874 to 315.275	SPEAKER_01:Yeah, well, you know, the three months I was living in Japan, I experienced two.
+from 316.455 to 322.997	SPEAKER_01:Both of those were very different, very different from the one I'd experienced here and also very different from the one in Bangkok.
+from 323.057 to 331.038	SPEAKER_01:But one of them, I was actually up in my apartment which was on the fifth floor of a building and I was woken up at about 5 o'clock in the morning to the building swaying.
+from 331.772 to 340.758	SPEAKER_01: And because earthquakes are like a dime a dozen in Japan, they've built a lot of their buildings to absorb the shock.
+from 341.639 to 342.8	SPEAKER_01:So that's why it was swaying.
+from 342.84 to 344.861	SPEAKER_01:It was really, it was a very surreal feel.
+from 347.903 to 349.144	SPEAKER_01:Hi, this is Kristen Dodds.
+from 349.564 to 350.645	SPEAKER_00:And this is Joe Weiss.
+from 351.385 to 358.93	SPEAKER_00:And we just wanted to let you know that this material is copyrighted in the year 2008 by Learn Real English LLC.
+from 362.164 to 364.959	SPEAKER_00: www.learnrealenglish.com
