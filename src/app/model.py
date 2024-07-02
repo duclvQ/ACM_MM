@@ -90,7 +90,8 @@ def generate_resvised_meeting_minutes(raw_document, first_meeting_minutes, quest
 def answer_question(question, context):
     # Define prompt
     prompt_template = """SYSTEM
-    Answer the following question based on the context below, keep the answer concise, less than 3 sentences.:
+    Answer the following question based on the context below, keep the answer concise, less than 3 sentences.
+    IF you don't know the answer, just say that you don't know or not mentioned in the context.:
     Context: {context}
     Question: {question}
     Answer:"""
