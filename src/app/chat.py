@@ -6,12 +6,18 @@ from model import   llm, chat_history,\
                     verify_question_generator, \
                     extract_keypoints, \
                     classify_user_need, \
-                    base_generator
+                    base_generator, \
+                    compress_transcript, \
+                    generate_first_meeting_minute, \
+                    extract_fact, \
+                    verify_question_generator, \
+                    answer_question
+                    
 from upload_button import upload_text_file
 from langchain_core.messages import HumanMessage, AIMessage
 # Streamed response emulator
-
-
+from prompt_analysis import MeetingSummaryEvaluator
+from utils import convert_str_to_json
 st.title("Simple chat")
 
 
@@ -21,7 +27,9 @@ if "messages" not in st.session_state:
     # warm up model
     print("Warming up model...")
     llm.invoke('start..')
-    
+
+if "first_run" not in st.session_state:
+    st.session_state.first_run = True
     
 if "upload_name" not in st.session_state:
     st.session_state.upload_name = None
@@ -45,14 +53,41 @@ if uploaded_file != None:
         with open(docs_dir, "rb") as f:
             raw_document = f.read()
 
-
-    
-
-    
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
+        
+# generate the first meeting minute
+if st.session_state.first_run:
+    st.write("Please upload a transcript or audio file to start.")
+    if raw_document:
+        st.session_state.first_run = False
+        st.write(':blue[Compress the transcript...]')
+        compressed_transcript, rate = compress_transcript(raw_document)
+        st.write(':blue[Compression rate:]', rate)
+        st.write(':blue[Generate a meeting minute from the compressed transcript...]')
+        st.session_state.messages.append({"role": "user", "content": "write a meeting minutes from the transcript."})
+        chat_history.append(f"HUMAN: write a meeting minutes from the transcript.\n")
+        first_meeting_minutes = st.write_stream(generate_first_meeting_minute(compressed_transcript))
+        
+        st.write(':blue[Here are the information that need to be rechecked.]')
+        verify_questions = st.write_stream(verify_question_generator(first_meeting_minutes))
+        # convert to dict
+        verify_questions = convert_str_to_json(verify_questions)
+        answers = []
+        for key in list(verify_questions.keys()):
+            for question in verify_questions[key]:
+                st.write(f":blue[Question: {question}]")
+                answer = st.write_stream(answer_question(question, context = raw_document))
+                answers.append(answer)
+                
+        st.session_state.messages.append({"role": "assistant", "content": first_meeting_minutes})
+        chat_history.append(f"AI: {first_meeting_minutes}\n")
+        st.write(':blue[Do you want me to change anything in the meeting minute?\n \
+                    Or You can ask me other questions about this meeting minutes.]')
+
+
 
 # Accept user input
 if prompt := st.chat_input("What is up?"):
@@ -64,11 +99,13 @@ if prompt := st.chat_input("What is up?"):
 
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
-        st.write(f":blue[{chat_history}]")
-        st.write(":blue[classifying user's input...]")
+        # st.write(f":blue[{chat_history}]")
+        # st.write(":blue[classifying user's input...]")
         # classify the user input
-        user_need = classify_user_need(prompt, chat_history)
-        st.write(f":blue[User need is: {user_need}]")
+        # user_need = classify_user_need(prompt, chat_history)
+        # st.write(f":blue[User need is: {user_need}]")
+        # Generate the first response
+        
         response = st.write_stream(base_generator(input_text=prompt, chat_history=chat_history, context = raw_document))
         
         # Add assistant response to chat history

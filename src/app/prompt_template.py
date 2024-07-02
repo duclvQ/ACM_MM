@@ -25,4 +25,44 @@ action_items_template = ChatPromptTemplate.from_messages([
     # MessagesPlaceholder(variable_name="conversation", optional=True)
 ])
 
-key_points_template = PromptTemplate
+
+mm_template = """
+## Meeting Minutes
+
+**Date:** [Date]
+**Time:** [Start Time] - [End Time]
+**Location:** [Location]
+**Attendees:**
+- [Person 1]
+- [Person 2]
+- [Person 3]
+
+### Agenda
+1. [Agenda Item 1]
+2. [Agenda Item 2]
+3. [Agenda Item 3]
+
+### Discussion Summary
+- **[Agenda Item 1]**: [Discussion Points]
+- **[Agenda Item 2]**: [Discussion Points]
+- **[Agenda Item 3]**: [Discussion Points]
+
+### Action Items
+- [Action Item 1]: [Person Responsible] - [Deadline]
+- [Action Item 2]: [Person Responsible] - [Deadline]
+- [Action Item 3]: [Person Responsible] - [Deadline]
+
+### Decisions Made
+- [Decision 1]
+- [Decision 2]
+- [Decision 3]
+
+**Next Meeting:**
+- **Date:** [Next Meeting Date]
+- **Time:** [Next Meeting Time]
+- **Location:** [Next Meeting Location]
+
+**Minutes Prepared by:**
+[Your Name]
+"""
+

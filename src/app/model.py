@@ -17,10 +17,10 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain.chains.llm import LLMChain
 from langchain.chains.summarize import load_summarize_chain
 from langchain_text_splitters import CharacterTextSplitter
-
+from llmlingua import PromptCompressor
 
 from prompt_template import key_points_template, action_items_template
-
+from prompt_template import mm_template
 
 
 text_splitter = CharacterTextSplitter(
@@ -33,16 +33,106 @@ text_splitter = CharacterTextSplitter(
 @st.cache_resource
 def load_ollama_llamma3():
     llm = ChatOllama(model="llama3", 
-                    temperature=0.5, 
+                    temperature=0.2, 
                     top_p=1,
                     mirostat = 2,
-                    mirostat_tau =4,
+                    mirostat_tau =2,
                     )
     return llm
-
-
+@st.cache_resource
+def load_ollama_llamma3_json():
+    llm = ChatOllama(model="llama3", 
+                    temperature=0.2, 
+                    top_p=1,
+                    mirostat = 2,
+                    mirostat_tau =2,
+                    format="json"
+                    )
+    return llm
+llm_json = load_ollama_llamma3_json()
 llm = load_ollama_llamma3()
 chat_history = []
+
+@st.cache_resource
+def load_llllingua():
+    llm_lingua = PromptCompressor(
+        model_name="microsoft/llmlingua-2-xlm-roberta-large-meetingbank",
+        use_llmlingua2=True, # Whether to use llmlingua-2
+    )
+    return llm_lingua
+
+llm_lingua = load_llllingua()
+
+
+
+def answer_question(question, context):
+    # Define prompt
+    prompt_template = """SYSTEM
+    Answer the following question based on the context below, keep the answer concise, less than 3 sentences.:
+    Context: {context}
+    Question: {question}
+    Answer:"""
+    prompt = PromptTemplate.from_template(prompt_template)
+    # Define LLM chain
+    llm_chain = prompt | llm
+    # Define StuffDocumentsChain
+    for chunks in llm_chain.stream({"question": question, "context": context}):
+        yield chunks
+
+def verify_question_generator(input_text):
+    # Define prompt
+    prompt_template = """Write ONLY questions based on the following text:
+    {input_text}
+    Return in json format:
+    """
+    prompt = PromptTemplate.from_template(prompt_template)
+    # Define LLM chain
+    llm_chain = LLMChain(llm=llm_json, prompt=prompt)
+    # Define StuffDocumentsChain
+    for chunks in llm_chain.stream({"input_text": input_text}):
+        yield chunks['text']
+        
+
+
+def extract_fact(input_text):
+    prompt_template = """SYSTEM
+    Extract the mentioned pieces of information that need to 
+    be rechecked from the following text:
+    {input_text}
+    Return in json format:
+    """
+    
+    messages = [
+        HumanMessage(
+            content=f"SYSTEM Extract the mentioned pieces of information that need to  \
+            be rechecked from the following text: \
+            {input_text} \
+            Return in json format:"
+        )
+    ]
+    prompt = PromptTemplate.from_template(prompt_template)
+    # chain = LLMChain(llm=llm_json, prompt=prompt)
+    chain = prompt | llm_json
+    for chunks in chain.stream({"input_text": input_text}):
+        yield chunks
+    # llm_json.invoke(messages)
+
+
+def generate_first_meeting_minute(transcripts, format = mm_template):
+    prompt_template = """SYSTEM
+    Write a meeting minute follow-up this format : {format}
+    and based on the following conversation:
+    Transcripts:
+    {transcripts}
+    """
+    prompt = PromptTemplate.from_template(prompt_template)
+    llm_chain =  prompt | llm
+    for chunks in llm_chain.stream({"transcripts": transcripts, "format": format}):
+        yield chunks
+        
+def compress_transcript(input_text, rate = 0.9):
+    compressed_prompt = llm_lingua.compress_prompt(input_text, instruction="", question="", rate = rate)
+    return compressed_prompt['compressed_prompt'], compressed_prompt['rate']
 
 def key_points_generator(input_text):
     # convert to string
@@ -140,12 +230,12 @@ def extract_keypoints(transcripts):
     keypoints = [kp.strip() for kp in keypoints]
     return keypoints
     
-def verify_question_generator(transcripts):
-    st.write(":blue[Now, let me generate questions for these information.]")
-    verify_question_prompt = ChatPromptTemplate.from_template("Generate 1 Wh-question for this information: {transcripts}")
-    verify_question_chain = verify_question_prompt | llm | StrOutputParser()
-    for chunks in verify_question_chain.stream(transcripts):
-        yield chunks
+# def verify_question_generator(transcripts):
+#     st.write(":blue[Now, let me generate questions for these information.]")
+#     verify_question_prompt = ChatPromptTemplate.from_template("Generate 1 Wh-question for this information: {transcripts}")
+#     verify_question_chain = verify_question_prompt | llm | StrOutputParser()
+#     for chunks in verify_question_chain.stream(transcripts):
+#         yield chunks
 # def chain_of_verification(transcripts):
 
 #     for kp in keypoints_generator(transcripts):

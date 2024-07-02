@@ -2,6 +2,7 @@
 import re
 import nvidia_smi
 
+import json
 def get_OpenAI_API_key():
     with open("/mnt/HDD1/duclv/open_ai_key.txt", "r") as f:
         openai_api_key = f.read().strip()
@@ -22,6 +23,8 @@ def available_mem_GPUs():
         mem[i] = mem[i]/1024**3
     return mem
 
+def convert_str_to_json(text):
+    return json.loads(text)
 def txt_reader(file):
     with open(file, 'r') as f:
         text = f.read()
