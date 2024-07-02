@@ -33,19 +33,19 @@ text_splitter = CharacterTextSplitter(
 @st.cache_resource
 def load_ollama_llamma3():
     llm = ChatOllama(model="llama3", 
-                    temperature=0.2, 
+                    temperature=0.1, 
                     top_p=1,
                     mirostat = 2,
-                    mirostat_tau =2,
+                    mirostat_tau =1,
                     )
     return llm
 @st.cache_resource
 def load_ollama_llamma3_json():
     llm = ChatOllama(model="llama3", 
-                    temperature=0.2, 
+                    temperature=0.1, 
                     top_p=1,
                     mirostat = 2,
-                    mirostat_tau =2,
+                    mirostat_tau =1,
                     format="json"
                     )
     return llm
@@ -64,6 +64,28 @@ def load_llllingua():
 llm_lingua = load_llllingua()
 
 
+def generate_resvised_meeting_minutes(raw_document, first_meeting_minutes, question_and_answer):
+    # Define prompt
+    prompt_template = """SYSTEM
+    Generate a revised meeting minute based on
+    the first meeting minute, and the question/answer below. 
+    KEEP the correct informations in the first meeting minute.
+    ONLY change if there are any conflicts or errors.
+    You should indicate the changes made in the revised meeting minute if needed.:
+    
+    First meeting minute: {first_meeting_minutes}
+    
+    Verification Question and Answer: {question_and_answer}
+    
+    Answer:
+    
+    Changes made in the revised meeting minute:
+    """
+    prompt = PromptTemplate.from_template(prompt_template)
+    # Define LLM chain
+    llm_chain = prompt | llm
+    for chunks in llm_chain.stream({"raw_document": raw_document, "first_meeting_minutes": first_meeting_minutes, "question_and_answer": question_and_answer}):
+        yield chunks
 
 def answer_question(question, context):
     # Define prompt

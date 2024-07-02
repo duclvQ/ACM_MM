@@ -11,7 +11,8 @@ from model import   llm, chat_history,\
                     generate_first_meeting_minute, \
                     extract_fact, \
                     verify_question_generator, \
-                    answer_question
+                    answer_question, \
+                    generate_resvised_meeting_minutes
                     
 from upload_button import upload_text_file
 from langchain_core.messages import HumanMessage, AIMessage
@@ -80,10 +81,18 @@ if st.session_state.first_run:
             for question in verify_questions[key]:
                 st.write(f":blue[Question: {question}]")
                 answer = st.write_stream(answer_question(question, context = raw_document))
-                answers.append(answer)
+                q_and_a = {"question": question, "answer": answer}
+                answers.append(q_and_a)
+                st.session_state.messages.append({"role": "assistant", "content": f"Question: {question}\nAnswer: {answer}"})
+        # join the answers
+        answers = "\n".join([f"Question: {qa['question']}\nAnswer: {qa['answer']}" for qa in answers])
+        st.write(':blue[Now, I will generate the revised meeting minutes based on the answers.]')
+        revised_meeting_minutes = st.write_stream(generate_resvised_meeting_minutes(raw_document,first_meeting_minutes, answers))
+        st.session_state.messages.append({"role": "assistant", "content": revised_meeting_minutes})
+        
                 
-        st.session_state.messages.append({"role": "assistant", "content": first_meeting_minutes})
-        chat_history.append(f"AI: {first_meeting_minutes}\n")
+        st.session_state.messages.append({"role": "assistant", "content": revised_meeting_minutes})
+        chat_history.append(f"AI: {revised_meeting_minutes}\n")
         st.write(':blue[Do you want me to change anything in the meeting minute?\n \
                     Or You can ask me other questions about this meeting minutes.]')
 
