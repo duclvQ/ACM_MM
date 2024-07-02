@@ -49,6 +49,7 @@ if uploaded_file != None:
     if uploaded_file.name != st.session_state.upload_name:
             upload_state, raw_document = load_raw_document()
             st.session_state.upload_name = uploaded_file.name
+            st.session_state.first_run = True
     else:
         docs_dir = os.path.join("uploads", uploaded_file.name.split(".")[0] + ".txt")
         with open(docs_dir, "rb") as f:
