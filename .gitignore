@@ -1,3 +1,4 @@
-src/app/upload/**
+src/app/uploads/
+src/app/logs/
 src/app/conversation.ipynb
 src/app/rag.ipynb
