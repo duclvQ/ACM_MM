@@ -2,6 +2,11 @@
 import re
 import nvidia_smi
 
+def get_OpenAI_API_key():
+    with open("/mnt/HDD1/duclv/open_ai_key.txt", "r") as f:
+        openai_api_key = f.read().strip()
+    return openai_api_key
+
 def available_mem_GPUs():
     # Get the available memory for each GPU
     nvidia_smi.nvmlInit()

@@ -1,0 +1,48 @@
+write meetings minutes, keep the time
+
+from 3.294 to 4.095	SPEAKER_00: Hey, check this out.
+from 4.475 to 6.597	ER_00:You know what Eric asked me when I got into work this morning?
+from.617 to 8.339	ER_01:I have no idea.
+from.359 to 9.28	ER_01:What did he ask you?
+from.88 to 11.942	ER_00:He asked me if I felt the earthquake last night.
+from 13.224 to.984	ER_01:Earthquake?
+from.405 to.526	_01:You've got to be kidding.
+from.566 to.727	ER_01:I didn't feel an earthquake.
+from 16.987 to 18.008	ER_00:I know, that's what I said.
+from.028 to.571	ER_00:He told me it actually woke him up last night.
+from.581 to.562	_00: You know, yeah, it was like it went, it happened at like, uh, four 42 in the morning.
+from.742 to.124	_:So we must've been sleeping, but I mean, it's possible that, you know, even if we had been awake, we might not have felt it because you know, maybe it, uh,'t felt, you know, this far North.
+from.764 to.225	_:But, uh, I mean, I thought he was pulling my leg when he first talked about it.
+from 43.265 to.306	ER_01:Well, I guess that's not so farfetched considering we live on a major fault line here.
+from 48.271 to.212	_: Yeah, but actually, I think this earthquake was on a different fault line.
+from.553 to.	_:Because, you know, Eric lives just south of San Jose.
+from.895 to.	_:Yeah.
+from. to.9	_:And the earthquake, he said, was due east of San Jose.
+from. to.	_:So he was obviously a lot closer to the epicenter than we were.
+from.05 to.9ER_00:So I'm not even sure it was felt here.
+from 69.559 to 70.919	_:Yeah, that makes sense.
+from.98 to.161	_:Well, you know, I've experienced a few earthquakes
+from.97 to.472	_: in the past several years, but I've been living here now a little over two years.
+from. to.634	_:I've, I think I've only experienced one here.
+from. to.815	_:It was really strange too.
+from. to 100.606	_:I was, um, each, I should say each earthquake has been a completely different experience, but the one I, the one I felt here, I was standing outside a restaurant talking to AJ and another friend and all of sudden it just felt like this shift.
+from.646 to.388	ER_:It's really hard to explain, but it made me think of like a cartoon, like how
+from 106. to.186	_: in the cartoon, like buildings might just shift to the right and then shift right back.from. to.	_:Yeah, without falling.
+from. to.	_:Yeah, without falling.
+from.8 to.	_:And I had no idea what was going on for a few minutes afterwards.
+from. to.	_:And then I realized, oh, that must have been earthquake.
+from 121.294 to.434	ER_:Yeah.
+from. to.	_:You know what I usually notice?
+from. to.9	_:The times that I've been at home here and there's been earthquake, it's almost as if there's this really big train or like a gigantic Mack truck going by.from. to.	: And suddenly, I start to hear the heater shaking, and it's like the noise is loud for like a second, and then it's gone.from. to.	:So it's really weird.from. to.78	:It's almost like the first couple of times I felt it, I't even aware it was earthquake while it was happening.from.66 to.5	_:Well, that's so funny you say that, because one that I experienced in Bangkok, it actually was after the tsunami.from. to.05	_: And so later I out that it was aftershock from the tsunami.from. to.	_:But anyway, I was in a building up on the floor and suddenly there was all thisling.from. to.	_:And I'm thinking myself, it was so irrational.from.7 to.	:I'm thinking myself, God, there's like a train going by and I can't believe that this building is shaking so much from the train.
+from. to.	_: Of course, a train't have made a building, or least me up on the floor, feel something to that effect.
+from. to.	_:I think it happened about two times.from. to.	_:That one't until several days later when I was talking to people and they were like, oh, did you feel the earthquake?from. to.	:Then it me, oh, that was earthquake.from. to.	_:Yeah, I know.from.9 to.	_:It's crazy how when you're not to feeling them, you could think it's something else.
+from. to.05	_: I mean, I've been living here for a while now and I've definitely felt my of earthquakes.from. to.	_:I, you know, when you live here, it's a given that you're to experience earthquakes.from. to.0	:You just hope that you're not to be here for the onefrom.7 to.	:When I first here, it was about five years after theeta earthquake, which was a very big earthquake here.from. to.:And,, there are a of people who lived here who I met who had actually been living in the area when the earthquake hit.from. to.6	_: So it was interesting to get their perspective.from. to.	:And it also me remember where I was when I heard about theeta earthquake.from.8 to.	:I was watching the World Series on TV, and it was taking place in Francisco.from. to.	:So as I'm watching it, suddenly the announcer starts saying,, I think we're feeling earthquake here.from. to.	:And the cameras started shakingfrom.9 to.EAKER_: And all of sudden, the TV coverage cut out.from 281. to.0	:So I to get a rundown of what happened.from.08 to.7	:So I turned to the news station, and within a few minutes, they were discussing this gigantic earthquake that had hit Francisco.from. to.8	:And they started showing pictures, maybe 30 minutes later, of these people who were to weed through the rubblefrom. to.8: of these buildings that had been like coming downfrom. to.:So, I, it was pretty scaryfrom. to.5E_:I'll you why.from.05 to.	:Yeah.from.8 to.	_:Yeah,, you, the three months I was living in Japan, I experienced two.from. to.	_:Both of those were very different, very different from the one I'd experienced here and also very from the one in Bangkok.from. to.0	_:But one of them, I was actually up in my apartment which was the floor of a building and I was up at about 5clock morning to the buildinging.from. to.: And because earthquakes are like a dime dozen in Japan, they've built a lot of their buildings to absorb the shock.
+from 341.639 to 342.8	SPEAKER_01:So that's why it was swaying.
+from 342.84 to 344.861	SPEAKER_01:It was really, it was a very surreal feel.
+from 347.903 to 349.144	SPEAKER_01:Hi, this is Kristen Dodds.
+from 349.564 to 350.645	SPEAKER_00:And this is Joe Weiss.
+from 351.385 to 358.93	SPEAKER_00:And we just wanted to let you know that this material is copyrighted in the year 2008 by Learn Real English LLC.
+from 362.164 to 364.959	SPEAKER_00: www.learnrealenglish.com
+
+
+What is the topic of the meeting?
